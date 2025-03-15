@@ -1,4 +1,3 @@
-import mongoose from "mongoose";
 import usersSchema from "../schemas/users.schema.js";
 
 class usersModel {

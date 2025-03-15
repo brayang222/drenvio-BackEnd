@@ -26,9 +26,10 @@ const specialPriceSchema = new mongoose.Schema(
     validUntil: { type: Date },
   },
   {
+    collection: "preciosEspecialesVargas22",
     timestamps: true,
     versionKey: false,
   }
 );
 
-export default mongoose.model("PreciosEspecialesVargas22", specialPriceSchema);
+export default mongoose.model("preciosEspecialesVargas22", specialPriceSchema);
