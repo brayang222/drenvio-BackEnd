@@ -16,6 +16,10 @@ class specialPriceModel {
   async getOneById(id) {
     return await specialPriceSchema.findById(id);
   }
+
+  async delete(id) {
+    return await specialPriceSchema.findOneAndDelete(id);
+  }
 }
 
 export default new specialPriceModel();
