@@ -1,4 +1,5 @@
 import mongoose from "mongoose";
+import { COLLECTION_PRECIOS_ESPECIALES } from "../constants.js";
 
 const specialPriceSchema = new mongoose.Schema(
   {
@@ -26,10 +27,13 @@ const specialPriceSchema = new mongoose.Schema(
     validUntil: { type: Date },
   },
   {
-    collection: "preciosEspecialesVargas22",
+    collection: COLLECTION_PRECIOS_ESPECIALES,
     timestamps: true,
     versionKey: false,
   }
 );
 
-export default mongoose.model("preciosEspecialesVargas22", specialPriceSchema);
+export default mongoose.model(
+  COLLECTION_PRECIOS_ESPECIALES,
+  specialPriceSchema
+);

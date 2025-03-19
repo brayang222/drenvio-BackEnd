@@ -5,12 +5,14 @@ import dbClient from "./config/dbClient.js";
 import routesProducts from "./routes/products.routes.js";
 import routesSpecialPrice from "./routes/specialPrice.routes.js";
 import routesUsers from "./routes/users.routes.js";
+import cors from "cors";
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(cors());
 
 app.get("/", () => console.log("Localhost"));
 
