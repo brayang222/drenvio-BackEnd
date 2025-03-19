@@ -2,7 +2,10 @@ import specialPriceSchema from "../schemas/specialPrice.schema.js";
 
 class specialPriceModel {
   async getAll() {
-    return await specialPriceSchema.find();
+    return await specialPriceSchema
+      .find()
+      .populate("productId", "_id, name")
+      .populate("usersDiscounts.userId", "email");
   }
 
   async create(specialPrice) {
